@@ -1,6 +1,6 @@
 import gradio as gr
 import requests
-backend_url="https://res-backend-8hho.onrender.com"
+backend_url="https://res-backend-8hho.onrender.com/resume"
 
 def resumerequest(skills):
     response = requests.post(backend_url,json={"skills": skills})
