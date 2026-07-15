@@ -10,4 +10,8 @@ def resumerequest(skills):
         return "Error connecting to backend."
 
 demo = gr.Interface(fn=resumerequest,inputs=gr.Textbox(label="Enter Skills", lines=5),outputs=gr.Textbox(label="Generated Resume", lines=20))
-demo.launch()
+if __name__ == "__main__":
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 7860))
+    )
