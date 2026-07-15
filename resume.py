@@ -1,5 +1,6 @@
 import gradio as gr
 import requests
+import os
 backend_url="https://res-backend-8hho.onrender.com/resume"
 
 def resumerequest(skills):
